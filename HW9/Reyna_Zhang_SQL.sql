@@ -75,19 +75,36 @@ inner join customer on payment.customer_id = customer.customer_id
 group by first_name,last_name order by last_name;
 
 -- 7a)
+-- not subquery way
 select film.title from film 
 inner join language on film.language_id = language.language_id
 where language.name = "English"
 and (upper(film.title) like "K%" or upper(film.title) like "Q%");
+-- subquery way
+select title from film
+where film.language_id in (
+select language_id from language where language.name = "English"
+)
+and (upper(film.title) like "K%" or upper(film.title) like "Q%");
+
+
 
 -- 7b)
+-- not subquery way
 select concat(first_name, " ",last_name) as actor_name,title as film_title from actor 
 inner join film_actor on film_actor.actor_id = actor.actor_id
 inner join film on film.film_id = film_actor.film_id
 where film.title = "Alone Trip";
+-- subquery way
+select concat(first_name, " ",last_name) as actor_name from actor
+where actor_id in (
+select actor_id from film_actor where film_id in (
+select film_id from film where title = "Alone Trip"
+)
+);
 
 -- 7c)
-select concat(first_name, " ",last_name) as custoemr_name,
+select concat(first_name, " ",last_name) as customer_name,
 email,country.country from customer
 inner join address on customer.address_id = address.address_id
 inner join city on address.city_id =  city.city_id
