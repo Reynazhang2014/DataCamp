@@ -6,66 +6,94 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-
-    <title>Weather Analysis</title>
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
+    <link href="bootstrap1.min.css" rel="stylesheet" type="text/css">
+    <title>Weather Analysis: Landing</title>
   </head>
-  <body>
-      <div class= "container-fluid">
-        <div class = "row"> <!--Navigation Bar-->
-          <div class = "col-md-12 col-sm-6">
-              <nav class="nav navbar-expand-lg navbar-light bg-light ">
-                  <a class="navbar-brand " href="#">Lattitude</a>
-                  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-                
-                  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ml-auto">
-                      <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
-                      </li>
-                      <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Dropdown
-                        </a>
-                        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                          <a class="dropdown-item" href="#">Action</a>
-                          <a class="dropdown-item" href="#">Another action</a>
-                          <div class="dropdown-divider"></div>
-                          <a class="dropdown-item" href="#">Something else here</a>
-                        </div>
-                      </li>
-                      <li class="nav-item">
-                        <a class="nav-link disabled" href="#">Disabled</a>
-                      </li>
-                    </ul>
-                    
-                  </div>
-                </nav>
-            </div>
+  <body style ="background-color: #d5d6d6c0">
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary"> <!--Navigation Bar-->
+        <a class="navbar-brand" href="#"><strong>Lattitude</strong></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="nav nav-pills">
+                        <li class="nav-item">
+                          <a class="nav-link active" href="./Comparison_Page.html">Comparison</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                          <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" 
+                          role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                          <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
+                            <a class="dropdown-item" href="./Max_Temperature.html">Max Temperature</a>
+                            <a class="dropdown-item" href="./Humidity.html">Humidity</a>
+                            <a class="dropdown-item" href="./Cloudiness.html">Cloudiness</a>
+                            <a class="dropdown-item" href="./Wind_Speed.html">Wind Speed</a>
+                          </div>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link active" href="./Data_Page.html">Data</a>
+                        </li>
+                        
+                      </ul>
+          
         </div>
+      </nav>
+      <div class= "container">
+       
         
-        <div class = "row py-md-4 pl-md-5" style ="background-color: #cae1e777"> <!--amin part--->
-          <main id = "mainblock1" class="col-md-8 col-sm-12 py-md-4 pl-md-5" style = "background-color:white" role = "main">
-            <div class = "row"></div>
-              <div class="pull-left"><img src="./Resources/assets/images/Fig1.png" style = "max-width: 30%"></div>
-              <div class="pull-left">
-                <p>In this project, we analyzed the relationship between weather and latitude, i.e., 
+        <div class = "row py-md-4 mt-md-5"> <!--main part--->
+          <!--<div class = "row justify-content-around">-->
+            <!--First Block Visualization-->
+          <div class="col-md-6 col-lg-6 col-sm-11 col-xs-11 py-md-4 pl-md-3 py-sm-2 pl-sm-2 mx-md-3 my-sm-2" style = "background-color:white">
+            <h1 class = "text-primary")>Summary: Latitude vs. X</h1>
+            <hr>
+            <div class = "row">
+                <div class ="col-md-5 col-sm-10">
+                  <img src="./Resources/assets/images/Fig1.png" alt="" class="img-responsive float-left mr-md-3" style = 'max-width: 90%'>
+                </div>
+                <div class= "col-md-11 col-sm-10 ml-md-3  py-md-4">
+                  <p class = "p-1" style = "line-height: 2">In this project, we analyzed the relationship between weather and latitude, i.e., 
                   how weather changes as getting closer to equator. First, we pulled data from OpenWeatherMap API to gether Weather
                   data over 500 cities.
-                </p>
-                <p>
-                  After sussessfully gathering the data 
-                </p>
+                  </p>
+                  <p class = "p-1" style = "line-height: 2">
+                  After sussessfully gathering the data, we used Python Matplotlib to perform various visualization on 
+                  relationship graphs. We looked at below factors: temperature, cloudiness, wind speed, and humidity. This site provides
+                  the source data and visulaizations created as part of the analysis, as well as explanations and descriptions of any
+                  trends and correlations that we have discovered along the analysis
+                  </p>
+                </div>
               </div>
-            </main>
-          </div>
+            </div>
+              <!--Second Block Visualization-->
+              <div class="col-md-5 col-sm-11 ml-md-2 py-md-4 pl-md-3 py-sm-2 my-sm-2 py-sx-2 pl-sx-2 pl-sm-2" style = "background-color:white">
+                <h1 class = "text-primary")>Visualzations</h1>
+                <hr>
+                <div class = "row">
+                  <div class = "col-lg-6 col-md-10 ">
+                    <img src = "./Resources/assets/images/Fig1.png" alt = "" style = "width:100%;height:100%">
+                  </div>
+                  <div class = "col-lg-6 col-md-10 ">
+                    <img src = "./Resources/assets/images/Fig2.png" alt = "" style = "width:100%;height:100%">
+                  </div>
+                <div class = "row">
+                    <div class = "col-lg-6 col-md-10 ">
+                        <img src = "./Resources/assets/images/Fig3.png" alt = "" style = "width:100%;height:100%">
+                    </div>
+                    <div class = "col-lg-6 col-md-10 ">
+                        <img src = "./Resources/assets/images/Fig4.png" alt = "" style = "width:100%;height:100%">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </main>
+          <!--</div>-->
         </div>
-      </div>  
+      </div>
+    </div>  
     
     
 

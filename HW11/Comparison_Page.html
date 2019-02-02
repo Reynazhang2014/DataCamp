@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <!--<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">-->
+    <link href="bootstrap1.min.css" rel="stylesheet" type="text/css">
+    <title>Weather Analysis: Comparison</title>
+  </head>
+  <body style ="background-color: #d5d6d6c0"> 
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top bg-primary"> <!--Navigation Bar-->
+                <a class="navbar-brand" href="./Landing_Page.html"><strong>Lattitude</strong></a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" 
+                data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarColor01">
+                        <ul class="nav nav-pills">
+                                <li class="nav-item">
+                                  <a class="nav-link active" href="./Comparison_Page.html">Comparison</a>
+                                </li>
+                                <li class="nav-item dropdown">
+                                  <a class="nav-link dropdown-toggle active" data-toggle="dropdown" href="#" 
+                                  role="button" aria-haspopup="true" aria-expanded="false">Plots</a>
+                                  <div class="dropdown-menu" x-placement="bottom-start" style="position: absolute; will-change: transform; top: 0px; left: 0px; transform: translate3d(0px, 40px, 0px);">
+                                    <a class="dropdown-item" href="./Max_Temperature.html">Max Temperature</a>
+                                    <a class="dropdown-item" href="./Humidity.html">Humidity</a>
+                                    <a class="dropdown-item" href="./Cloudiness.html">Cloudiness</a>
+                                    <a class="dropdown-item" href="./Wind_Speed.html">Wind Speed</a>
+                                  </div>
+                                </li>
+                                <li class="nav-item">
+                                  <a class="nav-link active" href="./Data_Page.html">Data</a>
+                                </li>
+                                
+                              </ul>
+                  
+                </div>
+              </nav>
+        <div class= "container">
+         
+          <div class = "row py-md-5"> <!--main part--->
+                <div class="col-md-12 col-lg-12 col-sm-12 py-md-4 pl-md-3 py-sm-2 pl-sm-2 mt-md-5" style = "background-color:white">
+                    <h1 class = "text-primary")>Comparison: Latitude vs. X</h1>
+                    <hr>
+                    <p> click any plot to get an in-depth analysis.</p>
+                </div>
+                <div class="col-md-12 col-sm-12 py-md-4 pl-md-3 py-sm-2 py-sx-2 pl-sx-2 pl-sm-2" style = "background-color:white">
+                        <div class = "row">
+                          <div class = "col-lg-6 col-md-12">
+                                <div class = "row">
+                                    <h3 class = "text-secondary offset-3">vs. Max Temperature</h3> 
+                                </div>
+                                <div class = "row">
+                                    <a href = "./Max_Temperature.html">
+                                        <img src = "./Resources/assets/images/Fig1.png" title = "vs " alt = "" style = "width:100%;height:100%">
+                                    </a>
+                                </div>
+                          </div>
+                          <div class = "col-lg-6 col-md-12">
+                                <div class="row">
+                                    <h3 class = "text-secondary offset-4">vs. Humidity</h3>
+                                </div>
+                                <div class = "row">
+                                    <a href = "./Humidity.html">
+                                        <img src = "./Resources/assets/images/Fig2.png" alt = "" style = "width:100%;height:100%">
+                                    </a>
+                                </div>
+                          </div>
+                        <div class = "row">
+                            <div class = "col-lg-6 col-md-12">
+                                <div class = "row">
+                                    <h3 class = "text-secondary offset-4">vs. Cloudiness</h3>
+                                </div>
+                                <div clas = "row">
+                                    <a href = "./Cloudiness.html">
+                                        <img src = "./Resources/assets/images/Fig3.png" alt = "" style = "width:100%;height:100%">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class = "col-lg-6 col-md-12">
+                                <div class = "row">
+                                    <h3 class = "text-secondary offset-4">vs. Wind Speed</h3>
+                                </div>
+                                <div class = "row">
+                                    <a href = "./Wind_Speed.html">
+                                        <img src = "./Resources/assets/images/Fig4.png" alt = "" style = "width:97%;height:100%">
+                                    </a>
+                                </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+
+        </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.6/umd/popper.min.js" integrity="sha384-wHAiFfRlMFy6i5SRaxvfOCifBUQy1xHdJ/yoi7FRNXMRBu5WHdZYu1hA6ZOblgut" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k" crossorigin="anonymous"></script>
+  </body>
+</html>
