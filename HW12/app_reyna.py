@@ -5,7 +5,8 @@ import scrape_mars
 app = Flask(__name__)
 
 #mongo connection
-mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_db")
+app.config["MONGO_URI"] = "mongodb://localhost:27017/mars_app"
+mongo = PyMongo(app)
 #conn = 'mongodb://localhost:27017'
 #client = pymongo.MongoClient(conn)
 
@@ -13,15 +14,15 @@ mongo = PyMongo(app, uri="mongodb://localhost:27017/mars_db")
 
 # drop all exising documents (if any)
 
-@app.route('/')
+@app.route("/")
 def index():
     mars_data = mongo.db.mars.find_one()
     return render_template("index_Reyna.html", mars_data=mars_data)
 
-@app.route('/scrape')
-def scrape():
+@app.route("/scrape")
+def scraper():
     mars = mongo.db.mars
-    data = scrape_mars.scrape_mars()
+    data = scrape_mars.scrape()
     mars.update(
         {},
         data,
